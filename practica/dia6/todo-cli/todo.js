@@ -1,0 +1,1 @@
+[{"id":0,"activity":"leer","status":"s"},{"id":1,"activity":"Leer toda la mañana","status":"e"},{"id":2,"activity":"nada","status":"e"},{"id":3,"activity":"nadar por el oceano","status":"s"},{"id":4,"activity":"andar en bicicleta","status":"s"},{"id":5,"activity":"guardar una lista de actividades","status":"s"}]
