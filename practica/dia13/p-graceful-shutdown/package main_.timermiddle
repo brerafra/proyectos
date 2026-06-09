@@ -1,0 +1,36 @@
+package main
+
+import (
+	"log"
+	"net/http"
+	"time"
+)
+
+// TimerMiddleware envuelve un http.Handler para medir el tiempo de respuesta
+func TimerMiddleware(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		inicio := time.Now()
+
+		// Llama al siguiente handler en la cadena
+		next.ServeHTTP(w, r)
+
+		// Calcula el tiempo transcurrido
+		duracion := time.Since(inicio)
+
+		log.Printf("[%s] %s tardó %v", r.Method, r.URL.Path, duracion)
+	})
+}
+
+func main() {
+	mux := http.NewServeMux()
+	mux.HandleFunc("/api/data", func(w http.ResponseWriter, r *http.Request) {
+		time.Sleep(150 * time.Millisecond) // Simula procesamiento
+		w.Write([]byte("Datos procesados"))
+	})
+
+	// Envolvemos el mux con nuestro middleware
+	loggedMux := TimerMiddleware(mux)
+
+	log.Println("Servidor escuchando en :8080")
+	http.ListenAndServe(":8080", loggedMux)
+}
