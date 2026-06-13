@@ -1,0 +1,27 @@
+La arquitectura limpia en Go organiza el código en capas independientes, separando la lógica
+de negocio de los detalles de la infraesctructura, esto facilita pruebas, mantenimiento y el
+reemplazo de bases de datos o frameworks.
+
+Estructura de directorios
+
+Proyecto/           
+|cmd/                       #Punto de entrada de la aplicación
+|   |--api/     
+|       --main.go           #Inicializa dependencias, router y servidor
+|internal/                  #Codigo privado de la aplicación
+|   |--domain/              # Entidades de negocio y logica central
+|   |   |--user.go          #Esctructura (struct) de User
+|   |   |--repository.go    #Interfaces de los repositorios
+|   |repository/            #Implementación del acceso a datos (BD, Apis)
+|   |   |--user_postgres.go #Logica del postgreSQL
+|   |usecase/               #casos de uso(orquestan las reglas de negocio)
+|   |   |--user_usecase.go  #Reglas de negocio del usuario
+|   |delivery/              #Puntos de entrega (HTTP, gRPC, CLI)
+|   |   |HTTP               #Controladores / Handlers HTTP(gin, echo, etc.)
+|   |   |   |--user_handlers.go
+|pkg/                       #Código público reutilizable(opcional)
+|go.mod                     #Gestion de dependencias
+
+
+
+-> ejemplo
