@@ -84,5 +84,15 @@ func MakeMigrations() error {
 	if _, err := db.Exec(ctx, q); err != nil {
 		fmt.Println("error creando tabla student_courses")
 	}
+
+	q = `CREATE TABLE teachers(
+		studen_id SERIAL PRIMARY KEY,
+		name VARCHAR(255),
+		shift INT
+	);`
+
+	if _, err := db.Exec(ctx, q); err != nil {
+		fmt.Println("error creando tabla teachers")
+	}
 	return nil
 }

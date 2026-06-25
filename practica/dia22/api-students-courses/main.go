@@ -27,6 +27,7 @@ func main() {
 	mux.HandleFunc("/courses", handlers.CoursesHandlers)
 	mux.HandleFunc("/classes", handlers.StudentCoursesHandlers)
 	mux.HandleFunc("/studentclasses", handlers.CourseStudentsHandlers)
+	mux.HandleFunc("/teachers", handlers.TeacherHandlers)
 
 	err := godotenv.Load()
 	if err != nil {

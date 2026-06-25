@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: brerafra
+      POSTGRES_DB: test
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "6432:5432" 
+volumes:
+  pgdata:
+
