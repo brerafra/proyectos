@@ -94,6 +94,14 @@ Dia31
 
 ---------------------------------------------------------------
 Dia32
+    -Registro de usuario api *
+    -Registro de usuario con portal web *
+    -Registro de usuario con password hashed *
 
 ---
 Dia33
+    -Login de usuario api *
+    -Login de usuario con portal web *
+    -Login de usuario con cookies de sesión *
+    -api-user-jwt con seguridad jwt y middleware auth
+    -refresh-token
