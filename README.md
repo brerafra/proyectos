@@ -105,3 +105,96 @@ Dia33
     -Login de usuario con cookies de sesión *
     -api-user-jwt con seguridad jwt y middleware auth
     -refresh-token
+---
+Dia34
+    -Webserver con template basico *
+    -Webserver con login-basico *
+    -webserver con login - v1 * 
+    -webser-con login-form-basico *
+
+---
+Dia35
+    -Tokens: Roles Admin/users *
+    -practica: api-users-jwt-roles-middleware *
+---
+Dia36 (28 de junio )
+    -Creación API- con User -V4 con permission *
+    -Rutas privadas con permission en middleware *
+    -API - JWT-TOKEN completo *
+    -Webserver login - con endpoint v1
+---
+Dia37 (29 de junio)
+    -Aprender go-routines *
+    -Lanzar 10 goroutines *
+    -channels             *
+    -api-con-goroutines
+    -webserber login-register-adminlte-v1
+---
+Dia38 (30 de junio)
+    -haz workerpool       *
+    -haz producer-consumer
+    -refactor-test
+    -test-vr1
+---
+Dia39 (1 de julio)
+    -Implementa mutex
+    -Provoca Race condition y despues arreglala
+    -imagenes y contenedores docker
+    -Dockerfile vr1
+    -Weberser Adminlte user v2 
+---
+Dia40 (2 de julio)
+    -Usa context cancelation
+    -dockefile vr2
+    -docker-compose vr1
+    -Webserver Adminlte user con boton eventos v1
+---
+Dia41 (3 de julio)
+    -Haz timeout requests
+    -dockerfile vr3
+    -docker-compose vr2
+---
+Dia42 (4 de julio)
+    - Haz concurrent http fetcher
+    -docker levantar stack completo
+    -Webserver Adminlte user con eventos eventos con paginación
+---
+Dia43 (5 de julio)
+    -Limita concurrencia
+    -Deploy dockerizado
+    -Webserver Adminlte user con eventos con filtros
+---
+Dia 44 (6 de julio)
+    -Implementa retry logic
+    -testing package v2
+    -Webserver CRUD task (paginación y filtros)
+---
+Dia 45 (7 de julio)
+    -Implementa rate limitiong
+    -Unit test
+    -Pagina web completa (login-logout-users-tasks-events)
+---
+Dia46
+    -Haz concurrent file processor
+    -table tests
+---
+Dia47
+    -Haz benchmarks
+    -mocks
+---
+Dia48
+    -Proyecto: crawler concurrente
+    -Integration tests
+---
+Dia49
+    -Crea dockerfile
+    -Coverage
+---
+Dia50
+    -Proyecto crea api-dockerizada
+    -Proyecto cubrir api con tests
+---
+Dia51
+    -Usa docker -compose
+    -Deep go-routines
+
